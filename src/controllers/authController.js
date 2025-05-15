@@ -1,4 +1,5 @@
 /** @format */
+const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const Wallet = require('../models/Wallet');
 const {
@@ -6,7 +7,7 @@ const {
   generateRefreshToken,
 } = require('../utils/generateToken');
 
-const registerUser = async (req, res) => {
+const register = async (req, res) => {
   const { name, email, password } = req.body;
   try {
     const existing = await User.findOne({ email });
@@ -28,7 +29,15 @@ const registerUser = async (req, res) => {
 
     const accessToken = generateAccessToken(user._id);
 
-    res.status(201).json({ accessToken, refreshToken });
+    tokens = {
+      accessToken,
+      refreshToken,
+    };
+
+    res.status(201).json({
+      message: 'Registration Successful',
+      data: tokens,
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -46,8 +55,12 @@ const login = async (req, res) => {
 
     user.refreshToken = refreshToken;
     await user.save();
+    tokens = {
+      accessToken,
+      refreshToken,
+    };
 
-    res.status(200).json({ accessToken, refreshToken });
+    res.status(200).json({ message: 'Login Successful', data: tokens });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -60,7 +73,7 @@ const logout = async (req, res) => {
 
   try {
     const user = await User.findOne({ refreshToken });
-    if (!user) return res.status(204).json({ message: 'Already logged out' }); // No content
+    if (!user) return res.status(204).json({ message: 'Already logged out' }); 
 
     user.refreshToken = null;
     await user.save();
@@ -97,4 +110,4 @@ const refreshAccessToken = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, login, logout, refreshAccessToken };
+module.exports = { register, login, logout, refreshAccessToken };

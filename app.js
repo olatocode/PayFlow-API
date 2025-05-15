@@ -18,7 +18,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
-  res.status(200).json({ data: 'Welcome To PayFlow API!' });
+  res.status(200).json({ message: 'Welcome To PayFlow API!' });
 });
 
 app.use('/api/v1/users', authRoute);
