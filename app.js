@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/users', authRoute);
-app.use('/api/v1/wallet', walletRoute);
+app.use('/api/v1/wallets', walletRoute);
 app.use('/api/v1/transactions', transactionRoute);
 
 module.exports = app;
