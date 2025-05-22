@@ -4,9 +4,13 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  password: String,
+  name: { type: String, required: ['name is required', true] },
+  email: {
+    type: String,
+    unique: true,
+    required: ['email is require', true],
+  },
+  password: { type: String, required: ['password is require', true] },
   refreshToken: String,
   wallet: { type: mongoose.Schema.Types.ObjectId, ref: 'Wallet' },
 });
