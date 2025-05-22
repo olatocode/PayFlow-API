@@ -1,9 +1,9 @@
 /** @format */
 
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../models/user');
 
-module.exports = async (req, res, next) => {
+const auth = async (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) return res.status(401).json({ message: 'Access token missing' });
 
@@ -15,3 +15,7 @@ module.exports = async (req, res, next) => {
     res.status(403).json({ message: 'Invalid or expired access token' });
   }
 };
+
+
+
+module.exports = auth;

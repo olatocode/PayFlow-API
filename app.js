@@ -7,6 +7,8 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 
 const authRoute = require('./src/routes/authRoute');
+const walletRoute = require('./src/routes/walletRoute');
+const transactionRoute = require('./src/routes/transactionRoute');
 
 const app = express();
 
@@ -22,5 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/users', authRoute);
+app.use('/api/v1/wallet', walletRoute);
+app.use('/api/v1/transactions', transactionRoute);
 
 module.exports = app;

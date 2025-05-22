@@ -1,7 +1,7 @@
 /** @format */
 const bcrypt = require('bcryptjs');
-const User = require('../models/User');
-const Wallet = require('../models/Wallet');
+const User = require('../models/user');
+const Wallet = require('../models/wallet');
 const {
   generateAccessToken,
   generateRefreshToken,
@@ -73,7 +73,7 @@ const logout = async (req, res) => {
 
   try {
     const user = await User.findOne({ refreshToken });
-    if (!user) return res.status(204).json({ message: 'Already logged out' }); 
+    if (!user) return res.status(204).json({ message: 'Already logged out' });
 
     user.refreshToken = null;
     await user.save();
