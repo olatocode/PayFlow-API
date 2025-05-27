@@ -10,8 +10,8 @@ const {
 const register = async (req, res) => {
   const { name, email, password } = req.body;
   try {
-    const existing = await User.findOne({ email });
-    if (existing)
+    const existUser = await User.findOne({ email });
+    if (existUser)
       return res.status(409).json({ message: 'Email already in use' });
 
     const user = new User({ name, email, password });
@@ -47,8 +47,12 @@ const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email }).populate('wallet');
-    if (!user || !(await bcrypt.compare(password, user.password)))
+    if (!user) {
+      return res.status(409).json({ message: 'User does not exist' });
+    }
+    if (!(await bcrypt.compare(password, user.password))) {
       return res.status(401).json({ message: 'Invalid credentials' });
+    }
 
     const accessToken = generateAccessToken(user._id);
     const refreshToken = generateRefreshToken(user._id);

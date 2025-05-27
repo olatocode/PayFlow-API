@@ -15,7 +15,7 @@ const getWallet = async (req, res) => {
 };
 
 const topUpWallet = async (req, res) => {
-  const user = req.user; // from auth middleware
+  const user = req.user; 
   const { amount } = req.body;
 
   if (!amount || amount <= 0) {
@@ -24,11 +24,11 @@ const topUpWallet = async (req, res) => {
 
   try {
     const wallet = await Wallet.findOne({ user: user._id });
-    wallet.balance += amount;
+    wallet.balance += amount ;
     await wallet.save();
 
     await Transaction.create({
-      sender: null, // No sender (system)
+      sender: user._id,
       receiver: user._id,
       amount,
       type: 'top-up',
@@ -73,8 +73,7 @@ const transferMoney = async (req, res) => {
 
     // Create transactions
     await Transaction.create([
-      { sender: sender._id, receiver: receiver._id, amount, type: 'debit' },
-      { sender: sender._id, receiver: receiver._id, amount, type: 'credit' },
+      { sender: sender._id, receiver: receiver._id, amount, type: 'transfer' },
     ]);
 
     res.status(200).json({ message: 'Transfer successful' });
