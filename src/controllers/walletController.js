@@ -1,21 +1,21 @@
 /** @format */
 
-const Wallet = require('../models/wallet');
-const User = require('../models/user');
-const Transaction = require('../models/transaction');
+import Wallet from '../models/wallet.js';
+import User from '../models/user.js';
+import Transaction from '../models/transaction.js';
 
-const getWallet = async (req, res) => {
+export const getWallet = async (req, res) => {
   try {
     const wallet = await Wallet.findOne({ user: req.user._id });
     res.status(200).json({ balance: wallet.balance, walletId: wallet._id });
   } catch (err) {
-      console.error(err)
+    console.error(err);
     res.status(500).json({ error: err.message });
   }
 };
 
-const topUpWallet = async (req, res) => {
-  const user = req.user; 
+export const topUpWallet = async (req, res) => {
+  const user = req.user;
   const { amount } = req.body;
 
   if (!amount || amount <= 0) {
@@ -24,7 +24,7 @@ const topUpWallet = async (req, res) => {
 
   try {
     const wallet = await Wallet.findOne({ user: user._id });
-    wallet.balance += amount ;
+    wallet.balance += amount;
     await wallet.save();
 
     await Transaction.create({
@@ -43,13 +43,12 @@ const topUpWallet = async (req, res) => {
   }
 };
 
-
-const transferMoney = async (req, res) => {
-  const { receiverEmail, amount } = req.body;
+export const transferMoney = async (req, res) => {
+  const { phone_no, amount } = req.body;
 
   try {
     const sender = req.user;
-    const receiver = await User.findOne({ email: receiverEmail }).populate(
+    const receiver = await User.findOne({ phone_no: phone_no }).populate(
       'wallet'
     );
 
@@ -81,5 +80,3 @@ const transferMoney = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-
-module.exports = { getWallet, transferMoney, topUpWallet };

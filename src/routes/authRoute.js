@@ -1,19 +1,20 @@
 /** @format */
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
-const {
+import {
   register,
   login,
   logout,
   refreshAccessToken,
-} = require('../controllers/authController');
-const validate = require('../middlewares/validate');
-const user = require('../validation/userSchema');
+} from '../controllers/authController.js';
+import validate from '../middlewares/validate.js';
+import user from '../validation/userSchema.js';
+import { loginLimiter } from '../middlewares/rateLimiter.js';
 
 router.post('/auth/register', validate(user), register);
-router.post('/auth/login', login);
+router.post('/auth/login', loginLimiter, login);
 router.post('/auth/logout', logout);
 router.post('/auth/refresh', refreshAccessToken);
 
-module.exports = router;
+export default router;

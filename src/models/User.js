@@ -1,16 +1,22 @@
 /** @format */
 
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: ['name is required', true] },
+  phone_no: { type: String, required: ['phone_no is required', true] },
   email: {
     type: String,
     unique: true,
     required: ['email is require', true],
   },
   password: { type: String, required: ['password is require', true] },
+  isDeleted: { type: Boolean, default: false },
+  deletedAt: {
+    type: Date,
+    default: null,
+  },
   refreshToken: String,
   wallet: { type: mongoose.Schema.Types.ObjectId, ref: 'Wallet' },
 });
@@ -23,4 +29,4 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-module.exports = mongoose.model('User', userSchema);
+export default mongoose.model('User', userSchema);

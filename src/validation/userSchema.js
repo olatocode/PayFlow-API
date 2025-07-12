@@ -1,11 +1,16 @@
 /** @format */
 
-const Joi = require('joi');
+import Joi from 'joi';
 
 const user = Joi.object({
   name: Joi.string().required().messages({
     'any.required': 'Name is required',
     'string.base': 'Name must be a string',
+  }),
+
+  phone_no: Joi.string().required().messages({
+    'any.required': 'Phone number is required',
+    'string.base': 'Phone number must be a string',
   }),
 
   email: Joi.string().email().required().messages({
@@ -20,4 +25,4 @@ const user = Joi.object({
   }),
 });
 
-module.exports = user;
+export default user;

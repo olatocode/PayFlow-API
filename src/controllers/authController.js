@@ -1,20 +1,21 @@
 /** @format */
-const bcrypt = require('bcryptjs');
-const User = require('../models/user');
-const Wallet = require('../models/wallet');
-const {
+import User from '../models/user.js';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import Wallet from '../models/wallet.js';
+import {
   generateAccessToken,
   generateRefreshToken,
-} = require('../utils/generateToken');
+} from '../utils/generateToken.js';
 
-const register = async (req, res) => {
-  const { name, email, password } = req.body;
+export const register = async (req, res) => {
+  const { name, phone_no, email, password } = req.body;
   try {
     const existUser = await User.findOne({ email });
     if (existUser)
       return res.status(409).json({ message: 'Email already in use' });
 
-    const user = new User({ name, email, password });
+    const user = new User({ name, phone_no, email, password });
     await user.save();
 
     const wallet = new Wallet({ user: user._id });
@@ -29,7 +30,7 @@ const register = async (req, res) => {
 
     const accessToken = generateAccessToken(user._id);
 
-    tokens = {
+    const tokens = {
       accessToken,
       refreshToken,
     };
@@ -43,7 +44,7 @@ const register = async (req, res) => {
   }
 };
 
-const login = async (req, res) => {
+export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email }).populate('wallet');
@@ -59,7 +60,7 @@ const login = async (req, res) => {
 
     user.refreshToken = refreshToken;
     await user.save();
-    tokens = {
+    const tokens = {
       accessToken,
       refreshToken,
     };
@@ -70,7 +71,7 @@ const login = async (req, res) => {
   }
 };
 
-const logout = async (req, res) => {
+export const logout = async (req, res) => {
   const { refreshToken } = req.body;
   if (!refreshToken)
     return res.status(400).json({ message: 'Refresh token required' });
@@ -88,7 +89,7 @@ const logout = async (req, res) => {
   }
 };
 
-const refreshAccessToken = async (req, res) => {
+export const refreshAccessToken = async (req, res) => {
   const { refreshToken } = req.body;
   if (!refreshToken)
     return res.status(401).json({ message: 'Refresh token missing' });
@@ -113,5 +114,3 @@ const refreshAccessToken = async (req, res) => {
     res.status(403).json({ message: 'Token expired or invalid' });
   }
 };
-
-module.exports = { register, login, logout, refreshAccessToken };

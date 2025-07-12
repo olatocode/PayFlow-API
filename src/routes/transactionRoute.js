@@ -1,10 +1,10 @@
 /** @format */
 
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const auth = require('../middlewares/auth');
-const { getTransactions } = require('../controllers/transactionController');
+import auth from '../middlewares/auth.js';
+import { getTransactions } from '../controllers/transactionController.js';
 
 router.get('/history', auth, getTransactions);
 
-module.exports = router;
+export default router;

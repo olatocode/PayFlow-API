@@ -1,13 +1,16 @@
 /** @format */
 
-const app = require('./app');
-const mongoose = require('mongoose');
+import app from './app.js';
+import logger from './src/utils/logger.js';
+import mongoose from 'mongoose';
 
 const PORT = process.env.PORT || 8000;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('MongoDB connected');
-    app.listen(PORT, () => console.log(`🛫 PayFlow running on port http://localhost:${PORT}`));
+    console.log('Database connected');
+    app.listen(PORT, () =>
+      logger.info(`🛫 PayFlow server running on http://localhost:${PORT}`)
+    );
   })
   .catch((err) => console.error('MongoDB connection error:', err));

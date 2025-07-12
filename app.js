@@ -1,30 +1,51 @@
 /** @format */
 
-const express = require('express');
-const helmet = require('helmet');
-const cors = require('cors');
-const morgan = require('morgan');
-const dotenv = require('dotenv');
+import express from 'express';
+import helmet from 'helmet';
+import cors from 'cors';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
 
-const authRoute = require('./src/routes/authRoute');
-const walletRoute = require('./src/routes/walletRoute');
-const transactionRoute = require('./src/routes/transactionRoute');
+import authRoute from './src/routes/authRoute.js';
+import userRoute from './src/routes/userRoute.js';
+import walletRoute from './src/routes/walletRoute.js';
+import transactionRoute from './src/routes/transactionRoute.js';
+import { errorHandler, handleNotFound } from './src/utils/errorHandler.js';
+import logger from './src/utils/logger.js';
+
 
 const app = express();
 
 dotenv.config();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }, { limit: '5mb' }));
 app.use(helmet());
 app.use(cors());
-app.use(morgan('dev'));
+
+// HTTP request logging
+app.use(
+  morgan('combined', {
+    stream: {
+      write: (message) => logger.info(message.trim()),
+    },
+  })
+);
 
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome To PayFlow API!' });
 });
 
-app.use('/api/v1/users', authRoute);
+app.use('/api/v1/users', authRoute, userRoute);
 app.use('/api/v1/wallets', walletRoute);
 app.use('/api/v1/transactions', transactionRoute);
 
-module.exports = app;
+// Handle 404 for undefined routes
+app.use(handleNotFound);
+
+// Global error handling middleware
+app.use(errorHandler);
+
+export default app;

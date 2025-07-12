@@ -1,8 +1,9 @@
 /** @format */
 
-const Joi = require('joi');
+import Joi from 'joi';
 const amount = Joi.object({
-  receiverEmail: Joi.string().required(false).messages({
+
+  phone_no: Joi.string().messages({
   }),
 
   amount: Joi.number().strict().required().messages({
@@ -11,4 +12,4 @@ const amount = Joi.object({
   }),
 });
 
-module.exports = amount;
+export default amount;

@@ -1,0 +1,74 @@
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T10:48:31.150Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:10:49:13 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 423 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T10:49:13.312Z"}
+{"ip":"::1","level":"info","message":"Request Details","method":"POST","timestamp":"2025-07-08T10:54:32.055Z","url":"/api/v1/users/auth/registers","userAgent":"PostmanRuntime/7.44.1"}
+{"ip":"::1","level":"warn","message":"404 Not Found","method":"POST","timestamp":"2025-07-08T10:54:32.107Z","url":"/api/v1/users/auth/registers","userAgent":"PostmanRuntime/7.44.1"}
+{"level":"info","message":"::1 - - [08/Jul/2025:10:55:00 +0000] \"POST /api/v1/users/auth/registers HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T10:55:00.019Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:16:41.738Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:16:56.211Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:17:18.653Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:37:22.728Z"}
+{"ip":"::1","level":"info","message":"Request Details","method":"POST","timestamp":"2025-07-08T11:39:09.118Z","url":"/api/v1/users/auth/registers","userAgent":"PostmanRuntime/7.44.1"}
+{"ip":"::1","level":"warn","message":"404 Not Found","method":"POST","timestamp":"2025-07-08T11:39:09.183Z","url":"/api/v1/users/auth/registers","userAgent":"PostmanRuntime/7.44.1"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:39:31 +0000] \"POST /api/v1/users/auth/registers HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:39:31.030Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:39:40 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:39:40.426Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:42:11.833Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:43:18 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 423 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:43:18.440Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:44:16 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 423 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:44:16.950Z"}
+{"ip":"::1","level":"info","message":"Request Details","method":"POST","timestamp":"2025-07-08T11:44:32.457Z","url":"/api/v1/users/auth/logins","userAgent":"PostmanRuntime/7.44.1"}
+{"ip":"::1","level":"warn","message":"404 Not Found","method":"POST","timestamp":"2025-07-08T11:44:32.462Z","url":"/api/v1/users/auth/logins","userAgent":"PostmanRuntime/7.44.1"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:44:55 +0000] \"POST /api/v1/users/auth/logins HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:44:55.685Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:45:45 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 416 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:45:45.484Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:46:24 +0000] \"POST /api/v1/wallets/topup HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:46:24.225Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:49:52.992Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:50:29 +0000] \"POST /api/v1/wallets/topup HTTP/1.1\" 200 45 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:50:29.947Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:51:46 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 403 45 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:51:46.353Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:52:28 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:52:28.157Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:54:32.183Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:54:39 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 400 39 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:54:39.913Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:54:58 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 200 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:54:58.867Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:55:13 +0000] \"GET /api/v1/wallets/balance HTTP/1.1\" 200 51 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:55:13.453Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:56:17 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 400 34 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:56:17.170Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:56:24 +0000] \"POST /api/v1/wallets/topup HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:56:24.941Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-08T11:57:50.399Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:58:05 +0000] \"POST /api/v1/wallets/topup HTTP/1.1\" 200 45 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:58:05.470Z"}
+{"level":"info","message":"::1 - - [08/Jul/2025:11:58:19 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 200 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-08T11:58:19.685Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T08:55:36.039Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:08:56:54 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 416 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T08:56:54.938Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:08:58:06 +0000] \"GET /api/v1/users/ HTTP/1.1\" 200 762 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T08:58:06.266Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:08:58:31 +0000] \"DELETE /api/v1/users/686d04562894f32f5520b29b HTTP/1.1\" 200 63 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T08:58:31.139Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T08:59:00.868Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:02:21 +0000] \"DELETE /api/v1/users/686d04562894f32f5520b29b HTTP/1.1\" 400 34 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:02:21.762Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T09:06:27.520Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T09:07:23.894Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:07:55 +0000] \"DELETE /api/v1/users/686d04562894f32f5520b29b HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:07:55.610Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T09:10:35.838Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T09:15:02.318Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:16:52 +0000] \"GET /api/v1/users/deleted HTTP/1.1\" 500 108 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:16:52.232Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:17:54 +0000] \"GET /api/v1/users/deleted HTTP/1.1\" 500 108 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:17:54.120Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:20:25 +0000] \"GET /api/v1/users/deleted HTTP/1.1\" 500 108 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:20:25.782Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-09T09:21:13.655Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:21:59 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 416 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:21:59.759Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:22:39 +0000] \"GET /api/v1/wallets/balance HTTP/1.1\" 200 51 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:22:39.227Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:23:18 +0000] \"POST /api/v1/wallets/topup HTTP/1.1\" 200 45 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:23:18.684Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:23:37 +0000] \"GET /api/v1/wallets/balance HTTP/1.1\" 200 54 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:23:37.292Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:24:35 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 423 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:24:35.476Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:26:26 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 403 45 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:26:26.744Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:27:24 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 400 34 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:27:24.061Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:27:44 +0000] \"POST /api/v1/wallets/transfer HTTP/1.1\" 200 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:27:44.582Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:29:16 +0000] \"GET /api/v1/wallets/balance HTTP/1.1\" 200 51 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:29:16.288Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:30:10 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 416 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:30:10.628Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:30:28 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 416 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:30:28.565Z"}
+{"level":"info","message":"::1 - - [09/Jul/2025:09:31:02 +0000] \"GET /api/v1/wallets/balance HTTP/1.1\" 200 54 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-09T09:31:02.801Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-12T17:54:55.163Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:17:55:00 +0000] \"POST /api/v1/users/auth/register HTTP/1.1\" 201 423 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T17:55:00.303Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:17:55:18 +0000] \"GET /api/v1/users/ HTTP/1.1\" 200 431 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T17:55:18.665Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:17:56:08 +0000] \"DELETE /api/v1/users/6872a173c1fbfe4bdaef1d66 HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T17:56:08.066Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:17:56:20 +0000] \"GET /api/v1/users/deleted HTTP/1.1\" 500 108 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T17:56:20.844Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-12T18:03:57.105Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:18:04:03 +0000] \"GET /api/v1/users/deleted HTTP/1.1\" 200 18 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:04:03.920Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-12T18:13:28.570Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:18:14:49 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:14:49.308Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:18:14:53 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:14:53.688Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:18:14:55 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:14:55.907Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:18:14:57 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 429 69 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:14:57.742Z"}
+{"level":"info","message":"::1 - - [12/Jul/2025:18:15:03 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 429 69 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:15:03.624Z"}

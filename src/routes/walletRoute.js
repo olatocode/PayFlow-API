@@ -1,18 +1,18 @@
 /** @format */
 
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const auth = require('../middlewares/auth');
-const validate = require('../middlewares/validate');
-const amount = require("../validation/transactionSchema")
-const {
+import auth from '../middlewares/auth.js';
+import validate from '../middlewares/validate.js';
+import amount from "../validation/transactionSchema.js"
+import {
   getWallet,
   transferMoney,
   topUpWallet,
-} = require('../controllers/walletController');
+} from '../controllers/walletController.js';
 
 router.get('/balance', auth ,getWallet);
 router.post('/topup', validate(amount), auth, topUpWallet);
 router.post('/transfer', auth, validate(amount), transferMoney);
 
-module.exports = router;
+export default router;
