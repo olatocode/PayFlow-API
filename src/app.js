@@ -9,12 +9,12 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-import authRoute from './src/routes/authRoute.js';
-import userRoute from './src/routes/userRoute.js';
-import walletRoute from './src/routes/walletRoute.js';
-import transactionRoute from './src/routes/transactionRoute.js';
-import { errorHandler, handleNotFound } from './src/utils/errorHandler.js';
-import logger from './src/utils/logger.js';
+import authRoute from './routes/authRoute.js';
+import userRoute from './routes/userRoute.js';
+import walletRoute from './routes/walletRoute.js';
+import transactionRoute from './routes/transactionRoute.js';
+import { errorHandler, handleNotFound } from './utils/errorHandler.js';
+import logger from './utils/logger.js';
 
 
 const app = express();

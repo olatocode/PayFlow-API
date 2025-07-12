@@ -72,3 +72,4 @@
 {"level":"info","message":"::1 - - [12/Jul/2025:18:14:55 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 401 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:14:55.907Z"}
 {"level":"info","message":"::1 - - [12/Jul/2025:18:14:57 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 429 69 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:14:57.742Z"}
 {"level":"info","message":"::1 - - [12/Jul/2025:18:15:03 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 429 69 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-12T18:15:03.624Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-12T18:38:47.857Z"}

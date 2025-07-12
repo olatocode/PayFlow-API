@@ -1,7 +1,7 @@
 /** @format */
 
 import app from './app.js';
-import logger from './src/utils/logger.js';
+import logger from './utils/logger.js';
 import mongoose from 'mongoose';
 
 const PORT = process.env.PORT || 8000;
