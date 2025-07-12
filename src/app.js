@@ -5,16 +5,14 @@ import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import path from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
+import logger from './utils/logger.js';
+import mongoose from 'mongoose';
 
 import authRoute from './routes/authRoute.js';
 import userRoute from './routes/userRoute.js';
 import walletRoute from './routes/walletRoute.js';
 import transactionRoute from './routes/transactionRoute.js';
 import { errorHandler, handleNotFound } from './utils/errorHandler.js';
-import logger from './utils/logger.js';
 
 
 const app = express();
@@ -48,4 +46,15 @@ app.use(handleNotFound);
 // Global error handling middleware
 app.use(errorHandler);
 
-export default app;
+// export default app;
+
+const PORT = process.env.PORT || 8000;
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('Database connected');
+    app.listen(PORT, () =>
+      logger.info(`🛫 PayFlow server running on http://localhost:${PORT}`)
+    );
+  })
+  .catch((err) => console.error('MongoDB connection error:', err));
