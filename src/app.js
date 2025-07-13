@@ -36,7 +36,8 @@ app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome To PayFlow API!' });
 });
 
-app.use('/api/v1/users', authRoute, userRoute);
+app.use('/api/v1/users', authRoute);
+app.use('/api/v1/users', userRoute);
 app.use('/api/v1/wallets', walletRoute);
 app.use('/api/v1/transactions', transactionRoute);
 
