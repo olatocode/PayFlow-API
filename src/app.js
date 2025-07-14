@@ -6,7 +6,6 @@ import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import logger from './utils/logger.js';
-import mongoose from 'mongoose';
 
 import authRoute from './routes/authRoute.js';
 import userRoute from './routes/userRoute.js';
@@ -47,15 +46,6 @@ app.use(handleNotFound);
 // Global error handling middleware
 app.use(errorHandler);
 
-// export default app;
+export default app;
 
-const PORT = process.env.PORT || 8000;
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('Database connected');
-    app.listen(PORT, () =>
-      logger.info(`🛫 PayFlow server running on http://localhost:${PORT}`)
-    );
-  })
-  .catch((err) => console.error('MongoDB connection error:', err));
+

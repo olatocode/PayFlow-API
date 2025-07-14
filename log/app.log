@@ -78,3 +78,10 @@
 {"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-12T19:03:19.236Z"}
 {"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-13T09:15:05.650Z"}
 {"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-13T09:28:22.566Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-14T15:35:31.467Z"}
+{"level":"info","message":"::1 - - [14/Jul/2025:15:40:08 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 409 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-14T15:40:08.019Z"}
+{"level":"info","message":"::1 - - [14/Jul/2025:15:40:29 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 409 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-14T15:40:29.069Z"}
+{"level":"info","message":"::1 - - [14/Jul/2025:15:41:07 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 409 33 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-14T15:41:07.111Z"}
+{"level":"info","message":"::1 - - [14/Jul/2025:15:41:26 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 429 69 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-14T15:41:26.862Z"}
+{"level":"info","message":"🛫 PayFlow server running on http://localhost:5000","timestamp":"2025-07-14T15:47:45.335Z"}
+{"level":"info","message":"::1 - - [14/Jul/2025:15:47:54 +0000] \"POST /api/v1/users/auth/login HTTP/1.1\" 200 416 \"-\" \"PostmanRuntime/7.44.1\"","timestamp":"2025-07-14T15:47:54.439Z"}
